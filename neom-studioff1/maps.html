@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <script>try{var _t=localStorage.getItem('neom.theme');if(_t==="light")document.documentElement.setAttribute("data-theme","light");}catch(e){}</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>المابات — Neom studio</title>
+  <link rel="icon" type="image/svg+xml" href="assets/img/logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/tokens.css" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/pages.css" />
+</head>
+<body dir="rtl">
+  <div class="ambient" aria-hidden="true"><span></span><span></span><span></span></div>
+
+  <div id="nav-mount"></div>
+
+  <main>
+    <header class="page-head">
+      <div class="page-head-inner reveal">
+        <nav class="breadcrumb" aria-label="breadcrumb">
+          <a href="index.html" data-i18n="nav.home">الرئيسية</a>
+          <span class="sep">/</span>
+          <span data-i18n="h.maps.t">المابات</span>
+          <span class="route">/maps</span>
+        </nav>
+        <h1 data-i18n="h.maps.t">المابات</h1>
+        <p data-i18n="h.maps.d">استعرض جميع مابات الاستديو، شاهد التفاصيل وادخل مباشرة إلى عالمك المفضل.</p>
+      </div>
+    </header>
+
+    <div class="toolbar">
+      <div class="search">
+        <span data-icon="search"></span>
+        <input class="input" id="catSearch" type="search" data-i18n-ph="w.search" placeholder="ابحث..." aria-label="بحث" />
+      </div>
+      <div class="chips" id="catChips"></div>
+    </div>
+
+    <section class="catalog" id="catGrid" data-type="maps"></section>
+  </main>
+
+  <div id="footer-mount"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="assets/js/supabase-config.js"></script>
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/data/data.js"></script>
+  <script src="assets/js/store.js"></script>
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/catalog.js"></script>
+</body>
+</html>

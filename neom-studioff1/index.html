@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <script>try{var _t=localStorage.getItem('neom.theme');if(_t==="light")document.documentElement.setAttribute("data-theme","light");}catch(e){}</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neom studio — استديو Roblox متكامل</title>
+  <link rel="icon" type="image/svg+xml" href="assets/img/logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/tokens.css" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/pages.css" />
+</head>
+<body dir="rtl">
+  <div class="ambient" aria-hidden="true"><span></span><span></span><span></span></div>
+
+  <div id="nav-mount"></div>
+
+  <main>
+    <!-- ============================ HERO ============================ -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-card card">
+          <img class="hero-pattern" src="assets/img/pattern.svg" alt="" aria-hidden="true" />
+
+          <div class="hero-copy reveal">
+            <p class="hero-eyebrow" data-i18n="hero.eyebrow">مرحباً بك في</p>
+            <h1 class="hero-title gradient-text">Neom studio</h1>
+            <p class="hero-desc" data-i18n="hero.desc">استديو Roblox متكامل يقدم لك أفضل المابات، الأنظمة، والتعلم لتطوير تجربتك الإبداعية!</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" id="hero-register" href="register.html">
+                <span data-icon="user"></span><span data-i18n="btn.register">صنع حساب جديد</span>
+              </a>
+              <a class="btn btn-ghost" id="hero-login" href="login.html">
+                <span data-icon="login"></span><span data-i18n="btn.login">تسجيل دخول</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-visual reveal">
+            <img class="hero-scene" src="assets/img/hero-studio.svg" alt="Neom Studio 3D scene" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================== FEATURES ========================= -->
+    <section class="container sec" id="features">
+      <div class="feature-grid">
+        <article class="feature card card-hover acc-teal reveal" id="feat-maps">
+          <div class="f-icon"><span data-icon="map"></span></div>
+          <h3 data-i18n="f.maps.t">المابات</h3>
+          <p data-i18n="f.maps.d">استعرض جميع مابات الاستديو</p>
+          <a class="btn btn-outline btn-sm" href="maps.html" data-i18n="btn.viewMaps">عرض المابات</a>
+        </article>
+
+        <article class="feature card card-hover acc-purple reveal" id="feat-systems">
+          <div class="f-icon"><span data-icon="system"></span></div>
+          <h3 data-i18n="f.systems.t">الأنظمة</h3>
+          <p data-i18n="f.systems.d">اكتشف الأنظمة المجانية والمدفوعة</p>
+          <a class="btn btn-outline btn-sm" href="systems.html" data-i18n="btn.viewSystems">عرض الأنظمة</a>
+        </article>
+
+        <article class="feature card card-hover acc-green reveal" id="feat-courses">
+          <div class="f-icon"><span data-icon="course"></span></div>
+          <h3 data-i18n="f.courses.t">دورات التعليم</h3>
+          <p data-i18n="f.courses.d">تعلم وطور مهاراتك مع دوراتنا</p>
+          <a class="btn btn-outline btn-sm" href="courses.html" data-i18n="btn.viewCourses">عرض الدورات</a>
+        </article>
+
+        <article class="feature card card-hover acc-gold reveal" id="feat-admin">
+          <div class="f-icon"><span data-icon="shield"></span></div>
+          <h3 data-i18n="f.admin.t">الإدارة</h3>
+          <p data-i18n="f.admin.d">لوحة تحكم شاملة للإدارة</p>
+          <a class="btn btn-outline btn-sm" href="admin.html" data-i18n="btn.adminPanel">لوحة الإدارة</a>
+        </article>
+
+        <article class="feature card card-hover acc-pink reveal" id="feat-complaints">
+          <div class="f-icon"><span data-icon="complaint"></span></div>
+          <h3 data-i18n="f.complaints.t">الشكوى و الاقتراحات</h3>
+          <p data-i18n="f.complaints.d">شاركنا رأيك لتحسين تجربتك</p>
+          <a class="btn btn-outline btn-sm" href="complaints.html" data-i18n="btn.sendComplaint">إرسال شكوى</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========================== PANELS =========================== -->
+    <section class="container sec" id="home-panels-sec">
+      <div class="home-panels">
+        <!-- News -->
+        <div class="panel card" id="panel-news">
+          <div class="panel-head">
+            <h2 data-i18n="p.news">أخبار الاستديو</h2>
+            <a class="link-all" href="forum.html"><span data-i18n="btn.viewAll">عرض الكل</span><span data-icon="arrowL"></span></a>
+          </div>
+          <div id="newsRows"></div>
+        </div>
+
+        <!-- Forum -->
+        <div class="panel card" id="panel-forum">
+          <div class="panel-head">
+            <h2 data-i18n="p.forum">المنتدى</h2>
+            <a class="link-all" href="forum.html"><span data-i18n="btn.viewAll">عرض الكل</span><span data-icon="arrowL"></span></a>
+          </div>
+          <div id="forumRows"></div>
+        </div>
+
+        <!-- Join admin -->
+        <div class="join-box card" id="panel-join">
+          <span class="tag t-new" data-i18n="join.tag">جديد</span>
+          <img class="join-ill" src="assets/img/logo.svg" alt="" aria-hidden="true" />
+          <h3 data-i18n="join.t">تريد الانضمام لفريق الإدارة؟</h3>
+          <p data-i18n="join.d">قدّم طلبك الآن للانضمام إلى فريقنا المبدع</p>
+          <a class="btn btn-primary btn-block" href="apply.html"><span data-icon="apply"></span><span data-i18n="btn.applyNow">تقديم الآن</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-mount"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="assets/js/supabase-config.js"></script>
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/data/data.js"></script>
+  <script src="assets/js/store.js"></script>
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/home.js"></script>
+</body>
+</html>

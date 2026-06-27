@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <script>try{var _t=localStorage.getItem('neom.theme');if(_t==="light")document.documentElement.setAttribute("data-theme","light");}catch(e){}</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>صنع حساب جديد — Neom studio</title>
+  <link rel="icon" type="image/svg+xml" href="assets/img/logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/tokens.css" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/pages.css" />
+</head>
+<body dir="rtl">
+  <div class="ambient" aria-hidden="true"><span></span><span></span><span></span></div>
+
+  <div id="nav-mount"></div>
+
+  <main>
+    <section class="auth-shell">
+      <form class="auth-card wide card reveal" id="registerForm" novalidate>
+        <div class="auth-head">
+          <img class="logo-badge" src="assets/img/logo.svg" alt="Neom studio" />
+          <h1>صنع حساب جديد</h1>
+          <p>انضم إلى مجتمع Neom Studio، إنشاء حسابك فوري بمجرد إكمال البيانات.</p>
+        </div>
+
+        <div class="form-row">
+          <div class="field">
+            <label for="regName">الاسم</label>
+            <div class="input-wrap">
+              <input class="input" id="regName" type="text" placeholder="اسمك الذي سيظهر للجميع" />
+              <span class="i-ico" data-icon="user"></span>
+            </div>
+            <small class="err">الاسم مطلوب</small>
+          </div>
+          <div class="field">
+            <label for="regEmail">البريد الإلكتروني</label>
+            <div class="input-wrap">
+              <input class="input" id="regEmail" type="email" placeholder="you@example.com" />
+              <span class="i-ico" data-icon="mail"></span>
+            </div>
+            <small class="err">بريد إلكتروني غير صحيح</small>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="field">
+            <label for="regPass">كلمة المرور</label>
+            <div class="input-wrap">
+              <input class="input" id="regPass" type="password" placeholder="6 أحرف على الأقل" />
+              <span class="i-ico" data-icon="lock"></span>
+            </div>
+            <small class="err">كلمة المرور 6 أحرف على الأقل</small>
+          </div>
+          <div class="field">
+            <label for="regPass2">تأكيد كلمة المرور</label>
+            <div class="input-wrap">
+              <input class="input" id="regPass2" type="password" placeholder="أعد كتابة كلمة المرور" />
+              <span class="i-ico" data-icon="lock"></span>
+            </div>
+            <small class="err">كلمتا المرور غير متطابقتين</small>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="field">
+            <label for="regPhone">رقم الواتساب</label>
+            <div class="input-wrap">
+              <input class="input" id="regPhone" type="tel" inputmode="tel" placeholder="+20 1XX XXX XXXX" />
+              <span class="i-ico" data-icon="whatsapp"></span>
+            </div>
+            <small class="err">رقم واتساب غير صحيح</small>
+          </div>
+          <div class="field">
+            <label for="regCountry">الدولة</label>
+            <select class="select" id="regCountry">
+              <option value="">اختر دولتك…</option>
+              <option value="EG">مصر</option>
+              <option value="SA">السعودية</option>
+              <option value="AE">الإمارات</option>
+              <option value="KW">الكويت</option>
+              <option value="QA">قطر</option>
+              <option value="MA">المغرب</option>
+              <option value="DZ">الجزائر</option>
+              <option value="IQ">العراق</option>
+              <option value="JO">الأردن</option>
+              <option value="other">دولة أخرى</option>
+            </select>
+            <small class="err">اختر الدولة</small>
+          </div>
+        </div>
+
+        <button class="btn btn-primary btn-block" type="submit">
+          <span data-icon="check"></span><span data-i18n="btn.register">صنع حساب جديد</span>
+        </button>
+
+        <p class="auth-foot">لديك حساب بالفعل؟ <a href="login.html" data-i18n="btn.login">تسجيل دخول</a></p>
+      </form>
+    </section>
+  </main>
+
+  <div id="footer-mount"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="assets/js/supabase-config.js"></script>
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/data/data.js"></script>
+  <script src="assets/js/store.js"></script>
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/auth.js"></script>
+</body>
+</html>
