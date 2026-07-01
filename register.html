@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <script>try{var _t=localStorage.getItem('neom.theme');if(_t==="light")document.documentElement.setAttribute("data-theme","light");}catch(e){}</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>التقديم لفريق الإدارة — Neom studio</title>
+  <link rel="icon" type="image/svg+xml" href="assets/img/logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/tokens.css" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/pages.css" />
+</head>
+<body dir="rtl">
+  <div class="ambient" aria-hidden="true"><span></span><span></span><span></span></div>
+
+  <div id="nav-mount"></div>
+
+  <main>
+    <header class="page-head">
+      <div class="page-head-inner reveal">
+        <nav class="breadcrumb" aria-label="breadcrumb">
+          <a href="index.html" data-i18n="nav.home">الرئيسية</a>
+          <span class="sep">/</span>
+          <span data-i18n="nav.apply">تقديم</span>
+          <span class="route">/apply</span>
+        </nav>
+        <h1 data-i18n="h.apply.t">التقديم لفريق الإدارة</h1>
+        <p data-i18n="h.apply.d">انضم إلى فريق Neom Studio المبدع، املأ النموذج بعناية وسنتواصل معك.</p>
+      </div>
+    </header>
+
+    <section class="container" style="margin-top:26px">
+      <form class="auth-card wide card reveal" id="applyForm" style="margin-inline:auto" novalidate>
+        <div class="form-row">
+          <div class="field">
+            <label for="appName">الاسم / اسمك داخل اللعبة</label>
+            <div class="input-wrap">
+              <input class="input" id="appName" type="text" placeholder="مثال: Omar_Dev" />
+              <span class="i-ico" data-icon="user"></span>
+            </div>
+            <small class="err">الاسم مطلوب</small>
+          </div>
+          <div class="field">
+            <label for="appRole">المجال الذي تريد الانضمام له</label>
+            <select class="select" id="appRole">
+              <option value="">اختر المجال…</option>
+              <option value="systems">مطوّر أنظمة (Scripting)</option>
+              <option value="builder">مصمم مابات (Builder)</option>
+              <option value="gfx">فنان جرافيك (GFX)</option>
+              <option value="mod">مشرف مجتمع (Moderator)</option>
+              <option value="other">مجال آخر</option>
+            </select>
+            <small class="err">اختر المجال</small>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="appReason">لماذا تريد الانضمام إلى الفريق؟</label>
+          <textarea class="textarea" id="appReason" maxlength="600" placeholder="اكتب نبذة عن دوافعك وما يمكنك تقديمه للفريق…"></textarea>
+          <div class="char-count">0 / 600</div>
+          <small class="err">اكتب 20 حرفًا على الأقل</small>
+        </div>
+
+        <div class="field">
+          <label for="appExp">خبرتك السابقة وأعمالك</label>
+          <textarea class="textarea" id="appExp" maxlength="400" placeholder="اذكر مشاريعك السابقة أو روابط أعمالك إن وجدت…"></textarea>
+          <div class="char-count">0 / 400</div>
+          <small class="err">هذا الحقل مطلوب</small>
+        </div>
+
+        <div class="form-row">
+          <div class="field">
+            <label for="appWhatsapp">رقم الواتساب</label>
+            <div class="input-wrap">
+              <input class="input" id="appWhatsapp" type="tel" inputmode="tel" placeholder="+20 1XX XXX XXXX" />
+              <span class="i-ico" data-icon="whatsapp"></span>
+            </div>
+            <small class="err">رقم واتساب غير صحيح</small>
+          </div>
+          <div class="field">
+            <label for="appDiscord">معرّف Discord <span style="color:var(--tx-muted);font-weight:400">(اختياري)</span></label>
+            <div class="input-wrap">
+              <input class="input" id="appDiscord" type="text" placeholder="username#0000" />
+              <span class="i-ico" data-icon="discord"></span>
+            </div>
+            <small class="err"></small>
+          </div>
+        </div>
+
+        <button class="btn btn-primary btn-block" type="submit">
+          <span data-icon="apply"></span><span data-i18n="btn.applyNow">تقديم الآن</span>
+        </button>
+        <p class="auth-foot">سيتم التواصل معك عبر الواتساب أو Discord بعد مراجعة طلبك.</p>
+      </form>
+    </section>
+  </main>
+
+  <div id="footer-mount"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="assets/js/supabase-config.js"></script>
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/data/data.js"></script>
+  <script src="assets/js/store.js"></script>
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/forms.js"></script>
+</body>
+</html>

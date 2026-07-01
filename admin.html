@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <script>try{var _t=localStorage.getItem('neom.theme');if(_t==="light")document.documentElement.setAttribute("data-theme","light");}catch(e){}</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>الملف الشخصي — Neom studio</title>
+  <link rel="icon" type="image/svg+xml" href="assets/img/logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/tokens.css" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/pages.css" />
+</head>
+<body dir="rtl">
+  <div class="ambient" aria-hidden="true"><span></span><span></span><span></span></div>
+
+  <div id="nav-mount"></div>
+
+  <main id="profilePage">
+    <header class="page-head">
+      <div class="page-head-inner reveal">
+        <nav class="breadcrumb" aria-label="breadcrumb">
+          <a href="index.html" data-i18n="nav.home">الرئيسية</a>
+          <span class="sep">/</span>
+          <span data-i18n="nav.profile">الملف الشخصي</span>
+          <span class="route">/profile</span>
+        </nav>
+        <h1 data-i18n="h.profile.t">الملف الشخصي</h1>
+        <p data-i18n="h.profile.d">بياناتك، رتبتك، وإعدادات حسابك في مكان واحد.</p>
+      </div>
+    </header>
+
+    <section class="profile-grid">
+      <!-- left: identity card -->
+      <aside class="profile-card card reveal">
+        <img class="pf-avatar" id="pfAvatar" src="assets/img/avatars/avatar-01.svg" alt="الصورة الرمزية" />
+        <h2 id="pfName">Player_01</h2>
+        <div class="role" id="pfRole" style="background:rgba(139,107,240,.16);color:#cbb8ff;border:1px solid rgba(139,107,240,.4)"></div>
+
+        <div class="profile-progress">
+          <div style="display:flex;align-items:center;justify-content:space-between;font-size:.82rem;color:var(--tx-3)">
+            <span>تقدّم المستوى</span>
+            <span id="pfXp" style="font-family:var(--font-en);color:var(--tx-1);font-weight:600">0%</span>
+          </div>
+          <div class="progress-bar"><i id="pfBar"></i></div>
+        </div>
+
+        <div class="profile-stats">
+          <div class="mini-stat"><b id="pfPosts">0</b><span>مشاركة</span></div>
+          <div class="mini-stat"><b id="pfPoints">0</b><span>نقطة</span></div>
+          <div class="mini-stat"><b id="pfLikes">0</b><span>إعجاب</span></div>
+          <div class="mini-stat"><b id="pfLevel">Lv.1</b><span>المستوى</span></div>
+        </div>
+
+        <button class="btn btn-outline btn-block" id="logoutBtn" style="margin-top:18px">
+          <span data-icon="login"></span><span>تسجيل الخروج</span>
+        </button>
+      </aside>
+
+      <!-- right: account info + avatar picker -->
+      <div style="display:flex;flex-direction:column;gap:22px">
+        <section class="info-list card reveal" id="pfInfo"></section>
+
+        <section class="card reveal" style="padding:24px">
+          <h3 style="margin:0 0 16px">اختر صورتك الرمزية</h3>
+          <div class="avatar-pick" id="avatarPick"></div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-mount"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="assets/js/supabase-config.js"></script>
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/data/data.js"></script>
+  <script src="assets/js/store.js"></script>
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/profile.js"></script>
+</body>
+</html>
