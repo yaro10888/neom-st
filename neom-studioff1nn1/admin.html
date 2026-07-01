@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <script>try{var _t=localStorage.getItem('neom.theme');if(_t==="light")document.documentElement.setAttribute("data-theme","light");}catch(e){}</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>لوحة الإدارة — Neom studio</title>
+  <link rel="icon" type="image/svg+xml" href="assets/img/logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/tokens.css" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/pages.css" />
+</head>
+<body dir="rtl">
+  <div class="admin-shell" id="adminShell">
+    <aside class="admin-side" id="adminSide"></aside>
+
+    <main class="admin-main">
+      <div class="admin-top">
+        <div style="display:flex;align-items:center;gap:14px">
+          <button class="admin-burger" id="adminBurger" aria-label="القائمة"><span data-icon="menu"></span></button>
+          <h1 id="adminTitle">لوحة التحكم</h1>
+        </div>
+        <div class="who">
+          <button class="ico-btn" id="themeBtn" aria-label="Theme"><span data-theme-icon></span></button>
+          <a class="btn btn-ghost btn-sm" href="index.html"><span data-icon="arrowR"></span><span>عرض الموقع</span></a>
+          <span style="text-align:start;line-height:1.25">
+            <b id="adminWhoName" style="display:block;font-size:.9rem;color:var(--tx-1)">—</b>
+            <span id="adminWhoRole" style="font-size:.74rem;color:var(--tx-muted)">—</span>
+          </span>
+          <img id="adminWhoAvatar" src="assets/img/avatars/avatar-01.svg" alt="المسؤول" />
+        </div>
+      </div>
+
+      <div id="adminContent"></div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="assets/js/supabase-config.js"></script>
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/data/data.js"></script>
+  <script src="assets/js/store.js"></script>
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/admin.js"></script>
+</body>
+</html>
